@@ -31,7 +31,7 @@ before_install:
     - sudo sh -c "curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo && chmod a+x /bin/repo"
 
 script:
-    - ccache -M 30G
+    - ccache -M 1G
     - sudo sh -c "mkdir /build && chown $(whoami):$(whoami) /build" && cd /build
     - git config --global color.ui false
     - repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-5.1 --depth=1
